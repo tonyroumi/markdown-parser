@@ -19,14 +19,18 @@ public class MarkdownParse {
 			int closeParan = markdown.indexOf(")", openParan);
 			toReturn.add(markdown.substring(openParan + 1, closeParan));
 			currentIndex = closeParan + 1;
-		}
+			if (markdown.indexOf("[", currentIndex) == -1){
+                break;
+            }
+        }
+		
 		
 		return toReturn;
 		
 	}
 
     public static void main(String[] args) throws IOException {
-		String contents = Files.readString(Path.of("./test-file.md"));
+		String contents = Files.readString(Path.of("./test-file2.md"));
 	    ArrayList<String> links = getLinks(contents);
 		System.out.println(links);
 
