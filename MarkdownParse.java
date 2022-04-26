@@ -21,6 +21,9 @@ public class MarkdownParse {
 			if (markdown.indexOf("[", currentIndex) == -1){
                 break;
             }
+			else if (markdown.indexOf("]", currentIndex) == -1){
+                break;
+            }
 			if (openBracket!=0){
                 if (!markdown.substring(openBracket + 1, closeBracket).equals("Image")&&
                 !markdown.substring(openBracket - 1, openBracket).equals("!")){
@@ -36,7 +39,7 @@ public class MarkdownParse {
 	}
 
     public static void main(String[] args) throws IOException {
-		String contents = Files.readString(Path.of("./test-file3.md"));
+		String contents = Files.readString(Path.of("./test-file4.md"));
 	    ArrayList<String> links = getLinks(contents);
 		System.out.println(links);
 
