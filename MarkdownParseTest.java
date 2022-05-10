@@ -28,7 +28,8 @@ public class MarkdownParseTest {
     String content = Files.readString(fileName);
     ArrayList<String> links = MarkdownParse.getLinks(content);
     ArrayList<String> correctOutput = new ArrayList<String>();
-    correctOutput.add("what's up");
+    correctOutput.add("https://something.com");
+    correctOutput.add("https://something.com");
     assertEquals(correctOutput, links);
   }
 
@@ -38,6 +39,8 @@ public class MarkdownParseTest {
     String content = Files.readString(fileName);
     ArrayList<String> links = MarkdownParse.getLinks(content);
     ArrayList<String> correctOutput = new ArrayList<String>();
+    correctOutput.add("https://something.com");
+    correctOutput.add("https://something.com");
     assertEquals(correctOutput, links);
   }
 
