@@ -5,7 +5,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
 
-public class MarkdownParse {
+public class MarkdownParseCopy {
 
 	public static ArrayList<String> getLinks(String markdown) {
 
@@ -39,7 +39,7 @@ public class MarkdownParse {
 	}
 
     public static void main(String[] args) throws IOException {
-		String contents = Files.readString(Path.of("./test-file4.md"));
+		String contents = Files.readString(Path.of("./test-file.md"));
 	    ArrayList<String> links = getLinks(contents);
 		System.out.println(links);
 
