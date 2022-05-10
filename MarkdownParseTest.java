@@ -40,8 +40,18 @@ public class MarkdownParseTest {
     ArrayList<String> correctOutput = new ArrayList<String>();
     assertEquals(correctOutput, links);
   }
-}
 
+
+@Test
+public void test4() throws IOException {
+  Path fileName = Path.of("test-file3.md");
+  String content = Files.readString(fileName);
+  ArrayList<String> links = MarkdownParse.getLinks(content);
+  ArrayList<String> correctOutput = new ArrayList<String>();
+  assertEquals(correctOutput, links);
+
+}
+}
 
 
 //javac -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar MarkdownParseTest.java
