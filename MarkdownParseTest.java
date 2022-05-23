@@ -42,17 +42,40 @@ public class MarkdownParseTest {
   //   assertEquals(correctOutput, links);
   // }
 
-  @Test
-    public void Test1() throws IOException{
-      Path fileName = Path.of("test-snippet1.md");
+  // @Test
+  //   public void Test-snip-1() throws IOException{
+  //     Path fileName = Path.of("test-snippet1.md");
+  //     String content = Files.readString(fileName);
+  //     ArrayList<String> links = MarkdownParse.getLinks(content);
+  //     ArrayList<String> correctOutput = new ArrayList<String>();
+  //     correctOutput.add("`google.com");
+  //     correctOutput.add("google.com");
+  //     correctOutput.add("ucsd.edu");
+  //     assertEquals(correctOutput, links);
+  //   }
+
+    // @Test
+    // public void Test-snip-2() throws IOException{
+    //   Path fileName = Path.of("test-snippet2.md");
+    //   String content = Files.readString(fileName);
+    //   ArrayList<String> links = MarkdownParse.getLinks(content);
+    //   ArrayList<String> correctOutput = new ArrayList<String>();
+    //   correctOutput.add("a.com");
+    //   correctOutput.add("a.com(())");
+    //   correctOutput.add("example.com");
+    //   assertEquals(correctOutput, links);
+    // }
+
+    @Test
+    public void Test3() throws IOException{
+      Path fileName = Path.of("test-snippet3.md");
       String content = Files.readString(fileName);
       ArrayList<String> links = MarkdownParse.getLinks(content);
       ArrayList<String> correctOutput = new ArrayList<String>();
-      correctOutput.add("`google.com");
-      correctOutput.add("google.com");
-      correctOutput.add("ucsd.edu");
+      correctOutput.add("https://sites.google.com/eng.ucsd.edu/cse-15l-spring-2022/schedule");
       assertEquals(correctOutput, links);
     }
+
 
 
 // @Test
